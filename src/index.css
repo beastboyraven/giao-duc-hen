@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply font-sans text-brand-ink bg-white antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+
+  ::selection {
+    background: #0F8B8D;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-tealLight/60 disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-teal text-white shadow-soft hover:bg-brand-tealDark hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply btn bg-brand-coral text-white shadow-soft hover:bg-brand-coralDark hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply btn bg-white text-brand-teal border border-brand-teal/30 hover:border-brand-teal hover:bg-brand-sky;
+  }
+
+  .card {
+    @apply rounded-3xl bg-white shadow-card transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-cardHover;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-teal transition-colors relative;
+  }
+
+  .nav-link.active {
+    @apply text-brand-teal;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    @apply absolute left-3 right-3 -bottom-1 h-0.5 rounded-full bg-brand-teal;
+  }
+
+  .prose-vn p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+  }
+}

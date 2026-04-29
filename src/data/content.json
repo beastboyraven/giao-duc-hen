@@ -1,0 +1,257 @@
+{
+  "site": {
+    "name": "GIÁO DỤC HEN",
+    "tagline": "Hiểu đúng - Dùng thuốc đúng - Bé khỏe mỗi ngày",
+    "organization": "Bệnh viện Nhi Đồng 1",
+    "language": "vi",
+    "theme": "friendly pediatric asthma education"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Hen Là Gì",
+      "path": "/hen-la-gi"
+    },
+    {
+      "label": "Xử Trí Tại Nhà",
+      "path": "/xu-tri-tai-nha"
+    },
+    {
+      "label": "Cấp Cứu Khẩn Cấp",
+      "path": "/cap-cuu-khan-cap"
+    },
+    {
+      "label": "Vệ Sinh & Kế Hoạch",
+      "path": "/ve-sinh-ke-hoach"
+    },
+    {
+      "label": "Cách Sử Dụng Dụng Cụ Hít",
+      "path": "/cach-su-dung-dung-cu-hit"
+    }
+  ],
+  "home": {
+    "hero": {
+      "title": "BA MẸ CÙNG CON QUẢN LÝ HEN",
+      "subtitle": "Hiểu đúng - Dùng thuốc đúng - Bé khỏe mỗi ngày",
+      "badge": "Hen kiểm soát được - Bé vẫn sống khỏe mạnh",
+      "primaryButton": {
+        "text": "TÌM HIỂU HEN LÀ GÌ",
+        "path": "/hen-la-gi"
+      },
+      "secondaryButton": {
+        "text": "KHI NÀO CẦN ĐI CẤP CỨU?",
+        "path": "/cap-cuu-khan-cap"
+      }
+    },
+    "featureCards": [
+      {
+        "title": "HEN LÀ GÌ?",
+        "description": "Hiểu đúng để kiểm soát tốt",
+        "path": "/hen-la-gi"
+      },
+      {
+        "title": "DẤU HIỆU NGUY HIỂM",
+        "description": "Nhận biết sớm - xử trí kịp thời",
+        "path": "/cap-cuu-khan-cap"
+      },
+      {
+        "title": "DÙNG THUỐC ĐÚNG CÁCH",
+        "description": "Đúng thuốc - đúng liều - đúng giờ",
+        "path": "/cach-su-dung-dung-cu-hit"
+      },
+      {
+        "title": "XỬ TRÍ TẠI NHÀ",
+        "description": "Bình tĩnh - đúng cách - bảo vệ bé",
+        "path": "/xu-tri-tai-nha"
+      }
+    ],
+    "benefits": [
+      "Kiểm soát tốt bé sống khỏe mạnh",
+      "Tuân thủ điều trị mỗi ngày",
+      "Đồng hành cùng con trên hành trình lớn khôn",
+      "Nhắc lịch dùng thuốc không lo quên"
+    ]
+  },
+  "pages": {
+    "hen-la-gi": {
+      "title": "Hen Là Gì?",
+      "intro": "Hen là bệnh viêm mạn tính của đường thở. Khi gặp yếu tố kích thích, đường thở có thể co thắt, phù nề và tăng tiết đàm gây ho, khò khè, khó thở.",
+      "sections": [
+        {
+          "heading": "Hen có lây không?",
+          "content": [
+            "Hen không phải là bệnh truyền nhiễm.",
+            "Hen có thể liên quan yếu tố cơ địa dị ứng và gia đình."
+          ]
+        },
+        {
+          "heading": "Dấu hiệu thường gặp",
+          "content": [
+            "Ho tái đi tái lại, đặc biệt về đêm.",
+            "Khò khè.",
+            "Khó thở.",
+            "Nặng ngực ở trẻ lớn."
+          ]
+        },
+        {
+          "heading": "Hen có kiểm soát được không?",
+          "content": [
+            "Có. Nếu dùng thuốc đúng và tái khám đúng hẹn, trẻ vẫn có thể học tập và sinh hoạt bình thường."
+          ]
+        },
+        {
+          "heading": "Khi nào nên khám chuyên khoa?",
+          "content": [
+            "Ho kéo dài hoặc tái phát nhiều lần.",
+            "Khò khè tái diễn.",
+            "Triệu chứng ảnh hưởng giấc ngủ hoặc vận động."
+          ]
+        }
+      ]
+    },
+    "xu-tri-tai-nha": {
+      "title": "Xử Trí Tại Nhà",
+      "intro": "Khi trẻ có dấu hiệu lên cơn hen, phụ huynh cần bình tĩnh và xử trí theo hướng dẫn bác sĩ.",
+      "sections": [
+        {
+          "heading": "Các dấu hiệu cơn hen",
+          "content": [
+            "Ho.",
+            "Khò khè.",
+            "Khó thở.",
+            "Nặng ngực.",
+            "Thức giấc về đêm do khó thở."
+          ]
+        },
+        {
+          "heading": "Các bước xử trí",
+          "content": [
+            "Cho trẻ dùng thuốc cắt cơn tác dụng nhanh dạng hít hoặc khí dung theo toa.",
+            "Cho trẻ nghỉ ngơi, ngồi tư thế thoải mái.",
+            "Theo dõi nhịp thở và đáp ứng sau dùng thuốc."
+          ]
+        },
+        {
+          "heading": "Lưu ý",
+          "content": [
+            "Không để trẻ ở một mình khi đang lên cơn.",
+            "Không tự ý dùng thuốc uống để cắt cơn nếu không có chỉ định.",
+            "Dù trẻ đỡ hơn vẫn nên nghỉ ngơi ít nhất 1 giờ."
+          ]
+        }
+      ]
+    },
+    "cap-cuu-khan-cap": {
+      "title": "Cấp Cứu Khẩn Cấp",
+      "intro": "Đưa trẻ đến cơ sở y tế ngay khi có dấu hiệu nguy hiểm hoặc không đáp ứng thuốc cắt cơn.",
+      "sections": [
+        {
+          "heading": "Dấu hiệu nguy hiểm",
+          "content": [
+            "Thuốc cắt cơn không hiệu quả hoặc chỉ đỡ rất ngắn.",
+            "Trẻ vẫn còn khó thở nhiều.",
+            "Nói khó, nói từng chữ.",
+            "Phải ngồi để thở.",
+            "Co kéo vùng cổ hoặc lồng ngực.",
+            "Cánh mũi phập phồng.",
+            "Tím môi hoặc đầu ngón tay."
+          ]
+        },
+        {
+          "heading": "Cần làm gì ngay?",
+          "content": [
+            "Giữ trẻ bình tĩnh.",
+            "Tiếp tục xử trí theo hướng dẫn bác sĩ nếu đã được dặn trước.",
+            "Đưa trẻ đi cấp cứu ngay."
+          ]
+        }
+      ]
+    },
+    "ve-sinh-ke-hoach": {
+      "title": "Vệ Sinh & Kế Hoạch",
+      "intro": "Giảm yếu tố kích phát và tuân thủ kế hoạch điều trị giúp phòng ngừa cơn hen.",
+      "sections": [
+        {
+          "heading": "Giữ môi trường sống sạch",
+          "content": [
+            "Không hút thuốc lá trong nhà và gần trẻ.",
+            "Tránh khói nhang, mùi xịt phòng, thuốc xịt côn trùng.",
+            "Giữ phòng ngủ sạch sẽ, gọn gàng.",
+            "Giặt chăn ga thường xuyên."
+          ]
+        },
+        {
+          "heading": "Hạn chế dị nguyên",
+          "content": [
+            "Hạn chế thú nuôi nếu làm nặng triệu chứng.",
+            "Diệt gián và côn trùng."
+          ]
+        },
+        {
+          "heading": "Kế hoạch chăm sóc",
+          "content": [
+            "Dùng thuốc dự phòng đúng chỉ định.",
+            "Tái khám đúng hẹn.",
+            "Không tự ý ngưng thuốc khi thấy đỡ."
+          ]
+        }
+      ]
+    },
+    "cach-su-dung-dung-cu-hit": {
+      "title": "Cách Sử Dụng Dụng Cụ Hít",
+      "intro": "Dùng đúng kỹ thuật giúp thuốc vào phổi tốt hơn và giảm tác dụng phụ.",
+      "sections": [
+        {
+          "heading": "MDI với buồng đệm (trẻ trên 4 tuổi)",
+          "content": [
+            "Lắc kỹ bình thuốc.",
+            "Gắn bình vào buồng đệm.",
+            "Ngậm kín miệng vào buồng đệm.",
+            "Ấn 1 nhát thuốc.",
+            "Hít chậm bằng miệng 10-15 giây.",
+            "Nếu cần thêm liều, nghỉ khoảng 1 phút rồi lặp lại."
+          ]
+        },
+        {
+          "heading": "MDI với mặt nạ (trẻ dưới 4 tuổi)",
+          "content": [
+            "Lắc kỹ bình thuốc.",
+            "Gắn bình vào buồng đệm và mặt nạ.",
+            "Úp kín mặt nạ mũi-miệng trẻ.",
+            "Ấn 1 nhát thuốc.",
+            "Cho trẻ thở bình thường khoảng 10 giây."
+          ]
+        },
+        {
+          "heading": "Máy khí dung",
+          "content": [
+            "Rửa tay trước khi chuẩn bị.",
+            "Cho thuốc vào bầu phun theo hướng dẫn.",
+            "Đeo mặt nạ hoặc dùng ống ngậm.",
+            "Bật máy và cho trẻ hít thở chậm.",
+            "Khi hết sương thì tắt máy."
+          ]
+        },
+        {
+          "heading": "Vệ sinh dụng cụ",
+          "content": [
+            "Rửa dụng cụ bằng nước ấm và xà phòng nhẹ.",
+            "Để khô tự nhiên.",
+            "Súc miệng hoặc rơ miệng sau corticoid hít."
+          ]
+        }
+      ]
+    }
+  },
+  "footer": {
+    "organization": "Bệnh viện Nhi Đồng 1",
+    "note": "Chung tay vì sức khỏe trẻ em",
+    "address": "123 Lý Tự Trọng, Quận 1, TP.HCM",
+    "phone": "(028) 1234 5678",
+    "email": "giaoduchen@nhi1dong.org.vn",
+    "qrText": "Quét mã để truy cập website giáo dục hen"
+  }
+}
