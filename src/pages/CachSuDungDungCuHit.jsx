@@ -18,6 +18,28 @@ export default function CachSuDungDungCuHit() {
         icon={Stethoscope}
       />
 
+      <section className="container-page mt-8 lg:mt-10">
+        <figure className="card overflow-hidden ring-1 ring-brand-teal/15 shadow-card bg-white">
+          <figcaption className="px-5 pt-5 pb-2 text-center">
+            <span className="text-sm font-semibold text-brand-teal uppercase tracking-wide">
+              Minh họa các bước
+            </span>
+            <p className="mt-1 text-sm text-slate-600">
+              Lắc bình thuốc — Lắp với buồng đệm — Thở ra rồi ngậm buồng — Ấn phóng thuốc và hít chậm,
+              sâu qua miệng (MDI + buồng đệm)
+            </p>
+          </figcaption>
+          <div className="px-3 pb-4 sm:px-5 sm:pb-6">
+            <img
+              src="/assets/cach-su-dung-dung-cu-hit.jpg"
+              alt="Hướng dẫn 4 bước: lắc bình thuốc, lắp buồng đệm, thở ra rồi ngậm miệng buồng, ấn thuốc và hít vào chậm"
+              className="w-full max-w-4xl mx-auto rounded-2xl border border-slate-100"
+              loading="lazy"
+            />
+          </div>
+        </figure>
+      </section>
+
       <section className="container-page mt-10 grid gap-5 md:grid-cols-2">
         {page.sections.map((s, i) => (
           <ContentSection

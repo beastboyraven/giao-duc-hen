@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Phone } from 'lucide-react'
-import content from '../data/content.json'
+import { ArrowRight } from 'lucide-react'
 
 export default function HelpfulCTA({
   title = 'Cần thêm thông tin?',
@@ -15,10 +14,6 @@ export default function HelpfulCTA({
           <div>
             <h3 className="text-xl sm:text-2xl font-bold text-brand-ink">{title}</h3>
             <p className="mt-2 text-slate-600 max-w-2xl leading-relaxed">{description}</p>
-            <p className="mt-4 inline-flex items-center gap-2 text-sm text-slate-600">
-              <Phone size={16} className="text-brand-teal" />
-              Hotline tư vấn:&nbsp;<span className="font-semibold text-brand-teal">{content.footer.phone}</span>
-            </p>
           </div>
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
             <Link to={primary.to} className="btn-primary">

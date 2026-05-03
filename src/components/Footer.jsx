@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import { MapPin, Phone, Mail, QrCode, Building2, Heart } from 'lucide-react'
+import { MapPin, Mail, Building2, Heart } from 'lucide-react'
 import content from '../data/content.json'
 
 export default function Footer() {
   const f = content.footer
   return (
     <footer className="mt-16 bg-gradient-to-b from-white to-brand-sky/60 border-t border-slate-100">
-      <div className="container-page py-12 grid gap-10 md:grid-cols-3">
+      <div className="container-page py-12 grid gap-10 md:grid-cols-2">
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img src="/assets/logo.png" alt="" className="h-10 w-10 object-contain" />
@@ -22,10 +22,6 @@ export default function Footer() {
           <p className="text-sm text-slate-600 mt-2 inline-flex items-start gap-2">
             <MapPin size={16} className="mt-0.5 text-brand-teal shrink-0" />
             <span>{f.address}</span>
-          </p>
-          <p className="text-sm text-slate-600 mt-2 inline-flex items-center gap-2">
-            <Phone size={16} className="text-brand-teal" />
-            {f.phone}
           </p>
           <p className="text-sm text-slate-600 mt-2 inline-flex items-center gap-2">
             <Mail size={16} className="text-brand-teal" />
@@ -47,16 +43,6 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div>
-          <h4 className="font-semibold text-brand-ink mb-4">Mã QR</h4>
-          <div className="flex items-center gap-4">
-            <div className="h-24 w-24 rounded-2xl border-2 border-dashed border-brand-teal/40 grid place-items-center bg-white">
-              <QrCode size={44} className="text-brand-teal" />
-            </div>
-            <p className="text-sm text-slate-600 max-w-[180px]">{f.qrText}</p>
-          </div>
         </div>
       </div>
 

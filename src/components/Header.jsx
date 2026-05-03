@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, Search, X } from 'lucide-react'
+import { Menu, Search } from 'lucide-react'
 import content from '../data/content.json'
 import MobileMenu from './MobileMenu.jsx'
 
