@@ -1,6 +1,7 @@
 import { Wind } from 'lucide-react'
 import content from '../data/content.json'
 import PageHero from '../components/PageHero.jsx'
+import PageLeadImage from '../components/PageLeadImage.jsx'
 import ContentSection from '../components/ContentSection.jsx'
 import HelpfulCTA from '../components/HelpfulCTA.jsx'
 
@@ -11,9 +12,13 @@ export default function HenLaGi() {
       <PageHero
         title={page.title}
         intro={page.intro}
-        badge="Chủ đề 01"
         accent="teal"
         icon={Wind}
+      />
+
+      <PageLeadImage
+        src="/assets/HenLaGi.png"
+        alt="Minh họa: hen là gì — đường thở và kiểm soát hen"
       />
 
       <section className="container-page mt-10 grid gap-5 md:grid-cols-2">
@@ -26,7 +31,7 @@ export default function HenLaGi() {
         title="Bé có dấu hiệu cần lưu ý?"
         description="Nếu bé ho tái đi tái lại, khò khè hoặc khó thở, ba mẹ hãy đưa bé đi khám chuyên khoa để được tư vấn kế hoạch điều trị phù hợp."
         primary={{ text: 'Cách xử trí tại nhà', to: '/xu-tri-tai-nha' }}
-        secondary={{ text: 'Khi nào cần cấp cứu?', to: '/cap-cuu-khan-cap' }}
+        secondary={{ text: 'Dấu hiệu nguy hiểm', to: '/cap-cuu-khan-cap' }}
       />
     </>
   )

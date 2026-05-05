@@ -4,7 +4,6 @@ import { ChevronRight, Home } from 'lucide-react'
 export default function PageHero({
   title,
   intro,
-  badge,
   accent = 'teal',
   icon: Icon
 }) {
@@ -18,8 +17,8 @@ export default function PageHero({
 
   return (
     <section className={['bg-gradient-to-b', bg].join(' ')}>
-      <div className="container-page py-10 lg:py-14">
-        <nav className="text-sm text-slate-500 inline-flex items-center gap-1 mb-4">
+      <div className="container-page py-8 sm:py-10 lg:py-12">
+        <nav className="text-sm text-slate-500 inline-flex items-center gap-1 mb-3">
           <Link to="/" className="inline-flex items-center gap-1 hover:text-brand-teal">
             <Home size={14} />
             Trang chủ
@@ -35,11 +34,6 @@ export default function PageHero({
             </div>
           )}
           <div className="flex-1">
-            {badge && (
-              <span className="badge bg-white text-brand-teal ring-1 ring-brand-teal/20 mb-3">
-                {badge}
-              </span>
-            )}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-ink text-balance">
               {title}
             </h1>

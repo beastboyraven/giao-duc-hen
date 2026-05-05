@@ -1,6 +1,7 @@
 import { CalendarCheck, Sparkles, Leaf, ClipboardList } from 'lucide-react'
 import content from '../data/content.json'
 import PageHero from '../components/PageHero.jsx'
+import PageLeadImage from '../components/PageLeadImage.jsx'
 import ContentSection from '../components/ContentSection.jsx'
 import HelpfulCTA from '../components/HelpfulCTA.jsx'
 
@@ -13,9 +14,13 @@ export default function VeSinhKeHoach() {
       <PageHero
         title={page.title}
         intro={page.intro}
-        badge="Chủ đề 04"
         accent="cream"
         icon={CalendarCheck}
+      />
+
+      <PageLeadImage
+        src="/assets/VeSinhVaKeHoach.png"
+        alt="Minh họa vệ sinh môi trường và kế hoạch điều trị hen"
       />
 
       <section className="container-page mt-10 grid gap-5 md:grid-cols-2">

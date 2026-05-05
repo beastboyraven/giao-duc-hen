@@ -20,7 +20,7 @@
       "path": "/xu-tri-tai-nha"
     },
     {
-      "label": "Cấp Cứu Khẩn Cấp",
+      "label": "Dấu Hiệu Nguy Hiểm",
       "path": "/cap-cuu-khan-cap"
     },
     {
@@ -42,7 +42,7 @@
         "path": "/hen-la-gi"
       },
       "secondaryButton": {
-        "text": "KHI NÀO CẦN ĐI CẤP CỨU?",
+        "text": "DẤU HIỆU NGUY HIỂM",
         "path": "/cap-cuu-khan-cap"
       }
     },
@@ -145,7 +145,7 @@
       ]
     },
     "cap-cuu-khan-cap": {
-      "title": "Cấp Cứu Khẩn Cấp",
+      "title": "Dấu Hiệu Nguy Hiểm",
       "intro": "Đưa trẻ đến cơ sở y tế ngay khi có dấu hiệu nguy hiểm hoặc không đáp ứng thuốc cắt cơn.",
       "sections": [
         {
@@ -250,8 +250,7 @@
     "organization": "Đơn vị quản lý suyễn- Khoa hô hấp- Bệnh viện Nhi Đồng 1",
     "note": "Chung tay vì sức khỏe trẻ em",
     "address": "341, Sư Vạn Hạnh/532 Lý Thái Tổ, Vườn Lài, Hồ Chí Minh 70000, Việt Nam",
-    "phone": "(028) 1234 5678",
-    "email": "giaoduchen@nhi1dong.org.vn",
-    "qrText": "Quét mã để truy cập website giáo dục hen"
+    "qrText": "Quét mã để truy cập website giáo dục hen",
+    "qrImage": "/assets/QRNhiDongOrgHuongDanChiTiet.png"
   }
 }

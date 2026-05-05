@@ -3,9 +3,11 @@ import { Link, NavLink } from 'react-router-dom'
 import { Menu, Search } from 'lucide-react'
 import content from '../data/content.json'
 import MobileMenu from './MobileMenu.jsx'
+import SearchModal from './SearchModal.jsx'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -23,14 +25,20 @@ export default function Header() {
       ].join(' ')}
     >
       <div className="container-page flex items-center justify-between h-16 lg:h-20">
-        <Link to="/" className="flex items-center gap-2 lg:gap-3 shrink-0">
+        <Link
+          to="/"
+          className="flex items-center gap-2.5 lg:gap-3.5 min-w-0 shrink-0 py-1"
+          title={content.site.name}
+        >
           <img
             src="/assets/logo.png"
-            alt="Bệnh viện Nhi Đồng 1"
-            className="h-9 w-9 lg:h-11 lg:w-11 object-contain"
+            alt=""
+            className="h-11 w-11 lg:h-14 lg:w-14 shrink-0 object-contain"
+            width="56"
+            height="56"
             loading="eager"
           />
-          <span className="font-extrabold text-brand-teal text-lg lg:text-xl tracking-tight">
+          <span className="font-extrabold text-brand-teal text-lg sm:text-xl lg:text-2xl tracking-tight leading-tight">
             {content.site.name}
           </span>
         </Link>
@@ -50,11 +58,15 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           <button
             type="button"
             aria-label="Tìm kiếm"
-            className="hidden sm:inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-600 hover:text-brand-teal hover:bg-brand-sky transition-colors"
+            onClick={() => {
+              setOpen(false)
+              setSearchOpen(true)
+            }}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-600 hover:text-brand-teal hover:bg-brand-sky transition-colors"
           >
             <Search size={20} />
           </button>
@@ -70,6 +82,7 @@ export default function Header() {
       </div>
 
       <MobileMenu open={open} onClose={() => setOpen(false)} />
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   )
 }

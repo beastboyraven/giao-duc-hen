@@ -41,10 +41,18 @@ export default function MobileMenu({ open, onClose }) {
         aria-modal="true"
         aria-label="Menu điều hướng"
       >
-        <div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-white px-5 h-16">
-          <div className="flex items-center gap-2">
-            <img src="/assets/logo.png" alt="" className="h-8 w-8 object-contain" />
-            <span className="font-extrabold text-brand-teal">{content.site.name}</span>
+        <div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-white px-5 h-16 gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <img
+              src="/assets/logo.png"
+              alt=""
+              className="h-11 w-11 shrink-0 object-contain"
+              width="44"
+              height="44"
+            />
+            <span className="font-extrabold text-brand-teal text-base leading-tight truncate">
+              {content.site.name}
+            </span>
           </div>
           <button
             type="button"
