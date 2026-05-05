@@ -29,7 +29,7 @@ export default function Header() {
     >
       <div className="container-page flex items-center justify-between gap-2 sm:gap-3 min-h-16 lg:min-h-[4.75rem]">
         {embedded ? (
-          <span className="block w-0 shrink-0 overflow-hidden" aria-hidden />
+          <span className="hidden lg:block w-0 shrink-0 overflow-hidden" aria-hidden />
         ) : (
           <Link
             to="/"
@@ -50,14 +50,25 @@ export default function Header() {
           </Link>
         )}
 
-        <nav className="hidden lg:flex flex-1 items-stretch justify-center gap-0 xl:gap-0.5 min-w-0 px-1">
+        <nav
+          className={[
+            'hidden lg:flex flex-1 items-stretch min-w-0 px-0.5',
+            embedded ? 'gap-0.5 xl:gap-1' : 'justify-center gap-0 xl:gap-0.5'
+          ].join(' ')}
+        >
           {content.navigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               end={item.path === '/'}
               className={({ isActive }) =>
-                ['nav-link', isActive ? 'active' : ''].join(' ')
+                [
+                  'nav-link',
+                  embedded ? 'nav-link--spread' : '',
+                  isActive ? 'active' : ''
+                ]
+                  .filter(Boolean)
+                  .join(' ')
               }
             >
               <NavLabel item={item} stacked />

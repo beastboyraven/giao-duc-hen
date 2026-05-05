@@ -64,6 +64,11 @@
     @apply relative z-0 inline-flex flex-col items-center justify-center px-1 sm:px-1.5 py-1.5 min-h-[2.85rem] max-w-[6.9rem] xl:max-w-[7.6rem] 2xl:max-w-[8.25rem] text-[11px] xl:text-xs 2xl:text-sm font-medium text-slate-700 hover:text-brand-teal transition-colors text-center leading-snug;
   }
 
+  /* Chế độ nhúng / full-width: chia đều các mục, bỏ max-width để giữ đúng 2 dòng navLines */
+  .nav-link--spread {
+    @apply flex-1 basis-0 min-w-0 max-w-none px-0.5 sm:px-1;
+  }
+
   .nav-link.active {
     @apply text-brand-teal;
   }
@@ -71,6 +76,10 @@
   .nav-link.active::after {
     content: '';
     @apply absolute left-1.5 right-1.5 bottom-0 h-[3px] rounded-full bg-brand-teal;
+  }
+
+  .nav-link--spread.active::after {
+    @apply left-1 right-1;
   }
 
   .prose-vn p {
