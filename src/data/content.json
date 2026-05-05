@@ -8,28 +8,33 @@
   },
   "navigation": [
     {
-      "label": "Home",
+      "label": "Trang chủ",
       "path": "/"
     },
     {
       "label": "Hen Là Gì",
-      "path": "/hen-la-gi"
+      "path": "/hen-la-gi",
+      "navLines": ["Hen Là", "Gì"]
     },
     {
       "label": "Xử Trí Tại Nhà",
-      "path": "/xu-tri-tai-nha"
+      "path": "/xu-tri-tai-nha",
+      "navLines": ["Xử Trí Tại", "Nhà"]
     },
     {
       "label": "Dấu Hiệu Nguy Hiểm",
-      "path": "/cap-cuu-khan-cap"
+      "path": "/cap-cuu-khan-cap",
+      "navLines": ["Dấu Hiệu", "Nguy Hiểm"]
     },
     {
       "label": "Vệ Sinh & Kế Hoạch",
-      "path": "/ve-sinh-ke-hoach"
+      "path": "/ve-sinh-ke-hoach",
+      "navLines": ["Vệ Sinh &", "Kế Hoạch"]
     },
     {
       "label": "Cách Sử Dụng Dụng Cụ Hít",
-      "path": "/cach-su-dung-dung-cu-hit"
+      "path": "/cach-su-dung-dung-cu-hit",
+      "navLines": ["Cách Sử Dụng", "Dụng Cụ Hít"]
     }
   ],
   "home": {

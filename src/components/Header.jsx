@@ -4,8 +4,11 @@ import { Menu, Search } from 'lucide-react'
 import content from '../data/content.json'
 import MobileMenu from './MobileMenu.jsx'
 import SearchModal from './SearchModal.jsx'
+import NavLabel from './NavLabel.jsx'
+import { useEmbedMode } from '../hooks/useEmbedMode.js'
 
 export default function Header() {
+  const embedded = useEmbedMode()
   const [open, setOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -24,26 +27,30 @@ export default function Header() {
         scrolled ? 'glass shadow-sm' : 'bg-white/70 backdrop-blur'
       ].join(' ')}
     >
-      <div className="container-page flex items-center justify-between h-16 lg:h-20">
-        <Link
-          to="/"
-          className="flex items-center gap-2.5 lg:gap-3.5 min-w-0 shrink-0 py-1"
-          title={content.site.name}
-        >
-          <img
-            src="/assets/logo.png"
-            alt=""
-            className="h-11 w-11 lg:h-14 lg:w-14 shrink-0 object-contain"
-            width="56"
-            height="56"
-            loading="eager"
-          />
-          <span className="font-extrabold text-brand-teal text-lg sm:text-xl lg:text-2xl tracking-tight leading-tight">
-            {content.site.name}
-          </span>
-        </Link>
+      <div className="container-page flex items-center justify-between gap-2 sm:gap-3 min-h-16 lg:min-h-[4.75rem]">
+        {embedded ? (
+          <span className="block w-0 shrink-0 overflow-hidden" aria-hidden />
+        ) : (
+          <Link
+            to="/"
+            className="flex items-center gap-2.5 lg:gap-3.5 min-w-0 shrink-0 py-1"
+            title={content.site.name}
+          >
+            <img
+              src="/assets/logo.png"
+              alt=""
+              className="h-11 w-11 lg:h-14 lg:w-14 shrink-0 object-contain"
+              width="56"
+              height="56"
+              loading="eager"
+            />
+            <span className="font-extrabold text-brand-teal text-lg sm:text-xl lg:text-2xl tracking-tight leading-tight">
+              {content.site.name}
+            </span>
+          </Link>
+        )}
 
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+        <nav className="hidden lg:flex flex-1 items-stretch justify-center gap-0 xl:gap-0.5 min-w-0 px-1">
           {content.navigation.map((item) => (
             <NavLink
               key={item.path}
@@ -53,12 +60,12 @@ export default function Header() {
                 ['nav-link', isActive ? 'active' : ''].join(' ')
               }
             >
-              {item.label}
+              <NavLabel item={item} stacked />
             </NavLink>
           ))}
         </nav>
 
-        <div className="flex items-center gap-1 sm:gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0">
           <button
             type="button"
             aria-label="Tìm kiếm"
@@ -81,7 +88,7 @@ export default function Header() {
         </div>
       </div>
 
-      <MobileMenu open={open} onClose={() => setOpen(false)} />
+      <MobileMenu open={open} onClose={() => setOpen(false)} embedded={embedded} />
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   )

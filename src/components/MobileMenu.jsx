@@ -3,8 +3,9 @@ import { createPortal } from 'react-dom'
 import { NavLink } from 'react-router-dom'
 import { X } from 'lucide-react'
 import content from '../data/content.json'
+import NavLabel from './NavLabel.jsx'
 
-export default function MobileMenu({ open, onClose }) {
+export default function MobileMenu({ open, onClose, embedded = false }) {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
@@ -41,30 +42,36 @@ export default function MobileMenu({ open, onClose }) {
         aria-modal="true"
         aria-label="Menu điều hướng"
       >
-        <div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-white px-5 h-16 gap-2">
-          <div className="flex items-center gap-2 min-w-0">
-            <img
-              src="/assets/logo.png"
-              alt=""
-              className="h-11 w-11 shrink-0 object-contain"
-              width="44"
-              height="44"
-            />
-            <span className="font-extrabold text-brand-teal text-base leading-tight truncate">
-              {content.site.name}
-            </span>
-          </div>
+        <div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-white px-5 h-14 min-h-[3.5rem] gap-2">
+          {!embedded && (
+            <div className="flex items-center gap-2 min-w-0 flex-1">
+              <img
+                src="/assets/logo.png"
+                alt=""
+                className="h-11 w-11 shrink-0 object-contain"
+                width="44"
+                height="44"
+              />
+              <span className="font-extrabold text-brand-teal text-base leading-tight truncate">
+                {content.site.name}
+              </span>
+            </div>
+          )}
+          {embedded && <span className="sr-only">{content.site.name}</span>}
           <button
             type="button"
             aria-label="Đóng menu"
             onClick={onClose}
-            className="h-10 w-10 inline-flex items-center justify-center rounded-full text-brand-teal hover:bg-brand-sky"
+            className={[
+              'h-10 w-10 inline-flex items-center justify-center rounded-full text-brand-teal hover:bg-brand-sky shrink-0',
+              embedded ? 'ml-auto' : ''
+            ].join(' ')}
           >
             <X size={22} />
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto bg-white p-3">
+        <nav className="flex-1 overflow-y-auto overscroll-contain bg-white p-3">
           {content.navigation.map((item) => (
             <NavLink
               key={item.path}
@@ -73,14 +80,14 @@ export default function MobileMenu({ open, onClose }) {
               onClick={onClose}
               className={({ isActive }) =>
                 [
-                  'block px-4 py-3 rounded-2xl text-base font-medium',
+                  'block rounded-2xl px-4 py-3 text-base font-medium',
                   isActive
                     ? 'bg-brand-sky text-brand-teal'
                     : 'text-slate-800 hover:bg-slate-100 bg-white'
                 ].join(' ')
               }
             >
-              {item.label}
+              <NavLabel item={item} stacked={false} />
             </NavLink>
           ))}
         </nav>

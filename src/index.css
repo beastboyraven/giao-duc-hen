@@ -61,7 +61,7 @@
   }
 
   .nav-link {
-    @apply px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-teal transition-colors relative;
+    @apply relative z-0 inline-flex flex-col items-center justify-center px-1 sm:px-1.5 py-1.5 min-h-[2.85rem] max-w-[6.9rem] xl:max-w-[7.6rem] 2xl:max-w-[8.25rem] text-[11px] xl:text-xs 2xl:text-sm font-medium text-slate-700 hover:text-brand-teal transition-colors text-center leading-snug;
   }
 
   .nav-link.active {
@@ -70,7 +70,7 @@
 
   .nav-link.active::after {
     content: '';
-    @apply absolute left-3 right-3 -bottom-1 h-0.5 rounded-full bg-brand-teal;
+    @apply absolute left-1.5 right-1.5 bottom-0 h-[3px] rounded-full bg-brand-teal;
   }
 
   .prose-vn p {
