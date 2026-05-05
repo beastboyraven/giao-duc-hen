@@ -71,7 +71,7 @@ export default function MobileMenu({ open, onClose, embedded = false }) {
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto overscroll-contain bg-white p-3">
+        <nav className="flex-1 overflow-y-auto overscroll-contain bg-white px-3 py-2">
           {content.navigation.map((item) => (
             <NavLink
               key={item.path}
@@ -80,14 +80,14 @@ export default function MobileMenu({ open, onClose, embedded = false }) {
               onClick={onClose}
               className={({ isActive }) =>
                 [
-                  'block rounded-2xl px-4 py-3 text-base font-medium',
+                  'block w-full text-left rounded-2xl px-4 py-3.5 text-[15px] leading-snug font-semibold tracking-tight',
                   isActive
-                    ? 'bg-brand-sky text-brand-teal'
-                    : 'text-slate-800 hover:bg-slate-100 bg-white'
+                    ? 'bg-brand-sky text-brand-teal shadow-sm ring-1 ring-brand-teal/15'
+                    : 'text-slate-800 hover:bg-slate-50 bg-white'
                 ].join(' ')
               }
             >
-              <NavLabel item={item} stacked={false} />
+              <NavLabel item={item} stacked={false} align="left" />
             </NavLink>
           ))}
         </nav>
