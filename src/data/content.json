@@ -252,9 +252,9 @@
     }
   },
   "footer": {
-    "organization": "Đơn vị quản lý suyễn- Khoa hô hấp- Bệnh viện Nhi Đồng 1",
+    "organization": "Đơn vị quản lý hen-Khoa hô hấp-Bệnh viện Nhi Đồng 1",
     "note": "Chung tay vì sức khỏe trẻ em",
-    "address": "341, Sư Vạn Hạnh/532 Lý Thái Tổ, Vườn Lài, Hồ Chí Minh 70000, Việt Nam",
+    "address": "341 Sư Vạn Hạnh, Phường Vườn Lài, Thành phố Hồ Chí Minh, Việt Nam",
     "qrText": "Quét mã để truy cập website giáo dục hen",
     "qrImage": "/assets/QRNhiDongOrgHuongDanChiTiet.png"
   }
