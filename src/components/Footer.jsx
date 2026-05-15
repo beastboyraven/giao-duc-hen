@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Building2, Heart } from 'lucide-react'
 import content from '../data/content.json'
+import { flattenNavLinks } from '../utils/navUtils.js'
 
 export default function Footer() {
   const f = content.footer
@@ -28,13 +29,16 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-brand-ink mb-4">Liên kết nhanh</h4>
           <ul className="space-y-2 text-sm">
-            {content.navigation.map((n) => (
-              <li key={n.path}>
+            {flattenNavLinks(content.navigation).map((n) => (
+              <li key={n.key}>
                 <Link
                   to={n.path}
-                  className="text-slate-600 hover:text-brand-teal transition-colors"
+                  className={[
+                    'text-slate-600 hover:text-brand-teal transition-colors',
+                    n.indent ? 'pl-3 text-slate-500' : ''
+                  ].join(' ')}
                 >
-                  {n.label}
+                  {n.indent ? `— ${n.label}` : n.label}
                 </Link>
               </li>
             ))}

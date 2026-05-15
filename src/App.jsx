@@ -7,6 +7,7 @@ import XuTriTaiNha from './pages/XuTriTaiNha.jsx'
 import CapCuuKhanCap from './pages/CapCuuKhanCap.jsx'
 import VeSinhKeHoach from './pages/VeSinhKeHoach.jsx'
 import EquipmentGuidePage from './pages/EquipmentGuidePage.jsx'
+import InhalerGuidePage from './pages/InhalerGuidePage.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function ScrollToTop() {
@@ -29,20 +30,29 @@ export default function App() {
           <Route path="/cap-cuu-khan-cap" element={<CapCuuKhanCap />} />
           <Route path="/ve-sinh-ke-hoach" element={<VeSinhKeHoach />} />
           <Route
+            path="/su-dung-khi-dung"
+            element={<EquipmentGuidePage pageKey="su-dung-khi-dung" />}
+          />
+          <Route
+            path="/huong-dan-dung-cu-hit"
+            element={<Navigate to="/huong-dan-dung-cu-hit/ong-ngam" replace />}
+          />
+          <Route path="/huong-dan-dung-cu-hit/:tab" element={<InhalerGuidePage />} />
+          <Route
             path="/cach-su-dung-dung-cu-hit"
-            element={<Navigate to="/su-dung-buong-dem" replace />}
+            element={<Navigate to="/huong-dan-dung-cu-hit/ong-ngam" replace />}
           />
           <Route
             path="/su-dung-mat-na"
-            element={<EquipmentGuidePage pageKey="su-dung-mat-na" />}
+            element={<Navigate to="/huong-dan-dung-cu-hit/mat-na" replace />}
           />
           <Route
             path="/su-dung-may-khi-dung"
-            element={<EquipmentGuidePage pageKey="su-dung-may-khi-dung" />}
+            element={<Navigate to="/su-dung-khi-dung" replace />}
           />
           <Route
             path="/su-dung-buong-dem"
-            element={<EquipmentGuidePage pageKey="su-dung-buong-dem" />}
+            element={<Navigate to="/huong-dan-dung-cu-hit/ong-ngam" replace />}
           />
           <Route path="*" element={<NotFound />} />
         </Routes>

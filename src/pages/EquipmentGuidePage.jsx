@@ -4,7 +4,7 @@ import content from '../data/content.json'
 import PageHero from '../components/PageHero.jsx'
 import ResponsiveInfographic from '../components/ResponsiveInfographic.jsx'
 
-export default function EquipmentGuidePage({ pageKey }) {
+export default function EquipmentGuidePage({ pageKey, subNav = null }) {
   const page = content.pages[pageKey]
   if (!page || !page.leadImage) {
     return null
@@ -20,6 +20,8 @@ export default function EquipmentGuidePage({ pageKey }) {
         accent="teal"
         icon={Stethoscope}
       />
+
+      {subNav}
 
       <section className="container-page mt-6 lg:mt-8 mb-10">
         <ResponsiveInfographic

@@ -32,19 +32,29 @@
       "navLines": ["Vệ Sinh &", "Kế Hoạch"]
     },
     {
-      "label": "Sử Dụng Mặt Nạ",
-      "path": "/su-dung-mat-na",
-      "navLines": ["Sử Dụng", "Mặt Nạ"]
+      "label": "Sử Dụng Khí Dung",
+      "path": "/su-dung-khi-dung",
+      "navLines": ["Sử Dụng", "Khí Dung"]
     },
     {
-      "label": "Máy Khí Dung",
-      "path": "/su-dung-may-khi-dung",
-      "navLines": ["Máy Khí", "Dung"]
-    },
-    {
-      "label": "Sử Dụng Buồng Đệm",
-      "path": "/su-dung-buong-dem",
-      "navLines": ["Sử Dụng", "Buồng Đệm"]
+      "label": "Hướng Dẫn Dụng Cụ Hít",
+      "path": "/huong-dan-dung-cu-hit",
+      "defaultPath": "/huong-dan-dung-cu-hit/ong-ngam",
+      "navLines": ["Hướng Dẫn", "Dụng Cụ Hít"],
+      "children": [
+        {
+          "label": "MDI với ống ngậm",
+          "path": "/huong-dan-dung-cu-hit/ong-ngam"
+        },
+        {
+          "label": "MDI với mặt nạ",
+          "path": "/huong-dan-dung-cu-hit/mat-na"
+        },
+        {
+          "label": "Vệ sinh buồng đệm",
+          "path": "/huong-dan-dung-cu-hit/ve-sinh-buong-dem"
+        }
+      ]
     }
   ],
   "home": {
@@ -75,7 +85,7 @@
       {
         "title": "DÙNG THUỐC ĐÚNG CÁCH",
         "description": "Đúng thuốc - đúng liều - đúng giờ",
-        "path": "/su-dung-buong-dem"
+        "path": "/huong-dan-dung-cu-hit/ong-ngam"
       },
       {
         "title": "XỬ TRÍ TẠI NHÀ",
@@ -162,28 +172,7 @@
     "cap-cuu-khan-cap": {
       "title": "Dấu Hiệu Nguy Hiểm",
       "intro": "Đưa trẻ đến cơ sở y tế ngay khi có dấu hiệu nguy hiểm hoặc không đáp ứng thuốc cắt cơn.",
-      "sections": [
-        {
-          "heading": "Dấu hiệu nguy hiểm",
-          "content": [
-            "Thuốc cắt cơn không hiệu quả hoặc chỉ đỡ rất ngắn.",
-            "Trẻ vẫn còn khó thở nhiều.",
-            "Nói khó, nói từng chữ.",
-            "Phải ngồi để thở.",
-            "Co kéo vùng cổ hoặc lồng ngực.",
-            "Cánh mũi phập phồng.",
-            "Tím môi hoặc đầu ngón tay."
-          ]
-        },
-        {
-          "heading": "Cần làm gì ngay?",
-          "content": [
-            "Giữ trẻ bình tĩnh.",
-            "Tiếp tục xử trí theo hướng dẫn bác sĩ nếu đã được dặn trước.",
-            "Đưa trẻ đi cấp cứu ngay."
-          ]
-        }
-      ]
+      "sections": []
     },
     "ve-sinh-ke-hoach": {
       "title": "Vệ Sinh & Kế Hoạch",
@@ -215,27 +204,29 @@
         }
       ]
     },
-    "su-dung-mat-na": {
-      "title": "MDI Với Mặt Nạ (Trẻ Dưới 4 Tuổi)",
-      "intro": "Minh họa các bước dùng bình xịt liều định lượng (MDI) với buồng đệm và mặt nạ cho trẻ nhỏ.",
-      "leadImage": "/assets/SuDungMatNa.jpg",
-      "sections": []
-    },
-    "su-dung-may-khi-dung": {
-      "title": "Máy Khí Dung",
+    "su-dung-khi-dung": {
+      "title": "Sử Dụng Khí Dung",
       "intro": "Minh họa các bước phun khí dung đúng cách, an toàn cho trẻ.",
       "leadImage": "/assets/SuDungMayKhiDung.jpg",
       "sections": []
     },
-    "su-dung-buong-dem": {
-      "title": "MDI Với Buồng Đệm (Trẻ Trên 4 Tuổi)",
-      "intro": "Minh họa các bước ngậm buồng đệm với MDI và lưu ý sau phun corticoid hít.",
+    "mdi-ong-ngam": {
+      "title": "MDI Với Ống Ngậm",
+      "intro": "Minh họa các bước ngậm buồng đệm với MDI và lưu ý sau phun corticoid hít (trẻ trên 4 tuổi).",
       "leadImage": "/assets/SuDungBuongDem.jpg",
-      "sections": [],
-      "cleanSection": {
-        "title": "Cách Vệ Sinh Buồng Đệm",
-        "leadImage": "/assets/VeSinhBuongDem.jpg"
-      }
+      "sections": []
+    },
+    "su-dung-mat-na": {
+      "title": "MDI Với Mặt Nạ",
+      "intro": "Minh họa các bước dùng bình xịt liều định lượng (MDI) với buồng đệm và mặt nạ cho trẻ dưới 4 tuổi.",
+      "leadImage": "/assets/SuDungMatNa.jpg",
+      "sections": []
+    },
+    "ve-sinh-buong-dem": {
+      "title": "Vệ Sinh Buồng Đệm",
+      "intro": "Hướng dẫn vệ sinh buồng đệm đúng cách để thuốc vào phổi tốt hơn và giảm nguy cơ nhiễm trùng.",
+      "leadImage": "/assets/VeSinhBuongDem.jpg",
+      "sections": []
     }
   },
   "footer": {

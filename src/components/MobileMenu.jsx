@@ -1,11 +1,14 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { X } from 'lucide-react'
 import content from '../data/content.json'
 import NavLabel from './NavLabel.jsx'
+import { isNavItemActive, navLinkTo } from '../utils/navUtils.js'
 
 export default function MobileMenu({ open, onClose, embedded = false }) {
+  const { pathname } = useLocation()
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
@@ -73,22 +76,44 @@ export default function MobileMenu({ open, onClose, embedded = false }) {
 
         <nav className="flex-1 overflow-y-auto overscroll-contain bg-white px-3 py-2">
           {content.navigation.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              end={item.path === '/'}
-              onClick={onClose}
-              className={({ isActive }) =>
-                [
-                  'block w-full text-left rounded-2xl px-4 py-3.5 text-[15px] leading-snug font-semibold tracking-tight',
-                  isActive
-                    ? 'bg-brand-sky text-brand-teal shadow-sm ring-1 ring-brand-teal/15'
-                    : 'text-slate-800 hover:bg-slate-50 bg-white'
-                ].join(' ')
-              }
-            >
-              <NavLabel item={item} stacked={false} align="left" />
-            </NavLink>
+            <div key={item.path} className="mb-1">
+              <NavLink
+                to={navLinkTo(item)}
+                end={item.path === '/' && !item.children}
+                onClick={onClose}
+                className={({ isActive }) =>
+                  [
+                    'block w-full text-left rounded-2xl px-4 py-3.5 text-[15px] leading-snug font-semibold tracking-tight',
+                    isActive || isNavItemActive(item, pathname)
+                      ? 'bg-brand-sky text-brand-teal shadow-sm ring-1 ring-brand-teal/15'
+                      : 'text-slate-800 hover:bg-slate-50 bg-white'
+                  ].join(' ')
+                }
+              >
+                <NavLabel item={item} stacked={false} align="left" />
+              </NavLink>
+              {item.children && item.children.length > 0 && (
+                <div className="ml-3 mt-0.5 mb-2 space-y-0.5 border-l-2 border-brand-teal/20 pl-2">
+                  {item.children.map((child) => (
+                    <NavLink
+                      key={child.path}
+                      to={child.path}
+                      onClick={onClose}
+                      className={({ isActive }) =>
+                        [
+                          'block w-full text-left rounded-xl px-3 py-2.5 text-sm font-medium',
+                          isActive
+                            ? 'bg-brand-teal/10 text-brand-teal'
+                            : 'text-slate-600 hover:bg-slate-50'
+                        ].join(' ')
+                      }
+                    >
+                      {child.label}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 

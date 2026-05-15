@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, Search } from 'lucide-react'
 import content from '../data/content.json'
 import MobileMenu from './MobileMenu.jsx'
 import SearchModal from './SearchModal.jsx'
 import NavLabel from './NavLabel.jsx'
 import { useEmbedMode } from '../hooks/useEmbedMode.js'
+import { isNavItemActive, navLinkTo } from '../utils/navUtils.js'
 
 export default function Header() {
+  const { pathname } = useLocation()
   const embedded = useEmbedMode()
   const [open, setOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -59,13 +61,13 @@ export default function Header() {
           {content.navigation.map((item) => (
             <NavLink
               key={item.path}
-              to={item.path}
-              end={item.path === '/'}
+              to={navLinkTo(item)}
+              end={item.path === '/' && !item.children}
               className={({ isActive }) =>
                 [
                   'nav-link',
                   embedded ? 'nav-link--spread' : '',
-                  isActive ? 'active' : ''
+                  isActive || isNavItemActive(item, pathname) ? 'active' : ''
                 ]
                   .filter(Boolean)
                   .join(' ')

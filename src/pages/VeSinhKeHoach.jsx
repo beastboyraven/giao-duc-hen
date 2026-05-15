@@ -38,7 +38,7 @@ export default function VeSinhKeHoach() {
       <HelpfulCTA
         title="Tìm hiểu cách dùng dụng cụ hít đúng cách"
         description="Dùng đúng kỹ thuật giúp thuốc vào phổi tốt hơn và giảm tác dụng phụ."
-        primary={{ text: 'Hướng dẫn dụng cụ hít', to: '/su-dung-buong-dem' }}
+        primary={{ text: 'Hướng dẫn dụng cụ hít', to: '/huong-dan-dung-cu-hit/ong-ngam' }}
         secondary={{ text: 'Xử trí tại nhà', to: '/xu-tri-tai-nha' }}
       />
     </>

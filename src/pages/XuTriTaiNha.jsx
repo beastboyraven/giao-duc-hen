@@ -65,7 +65,7 @@ export default function XuTriTaiNha() {
         title="Đừng quên kế hoạch điều trị"
         description="Tuân thủ thuốc dự phòng và tái khám đúng hẹn giúp bé hạn chế lên cơn hen."
         primary={{ text: 'Vệ sinh & Kế hoạch', to: '/ve-sinh-ke-hoach' }}
-        secondary={{ text: 'Cách dùng dụng cụ hít', to: '/su-dung-buong-dem' }}
+        secondary={{ text: 'Hướng dẫn dụng cụ hít', to: '/huong-dan-dung-cu-hit/ong-ngam' }}
       />
     </>
   )
