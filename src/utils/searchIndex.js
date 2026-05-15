@@ -29,6 +29,14 @@ export function buildSearchItems() {
       snippet: page.intro || ''
     })
 
+    if (page.cleanSection && page.cleanSection.title) {
+      items.push({
+        path: nav.path,
+        title: `${page.title}: ${page.cleanSection.title}`,
+        snippet: 'Hướng dẫn vệ sinh buồng đệm'
+      })
+    }
+
     const sections = page.sections || []
     for (const sec of sections) {
       const firstLine = Array.isArray(sec.content) && sec.content.length ? sec.content[0] : ''

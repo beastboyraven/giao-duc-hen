@@ -32,9 +32,19 @@
       "navLines": ["Vệ Sinh &", "Kế Hoạch"]
     },
     {
-      "label": "Cách Sử Dụng Dụng Cụ Hít",
-      "path": "/cach-su-dung-dung-cu-hit",
-      "navLines": ["Cách Sử Dụng", "Dụng Cụ Hít"]
+      "label": "Sử Dụng Mặt Nạ",
+      "path": "/su-dung-mat-na",
+      "navLines": ["Sử Dụng", "Mặt Nạ"]
+    },
+    {
+      "label": "Máy Khí Dung",
+      "path": "/su-dung-may-khi-dung",
+      "navLines": ["Máy Khí", "Dung"]
+    },
+    {
+      "label": "Sử Dụng Buồng Đệm",
+      "path": "/su-dung-buong-dem",
+      "navLines": ["Sử Dụng", "Buồng Đệm"]
     }
   ],
   "home": {
@@ -65,7 +75,7 @@
       {
         "title": "DÙNG THUỐC ĐÚNG CÁCH",
         "description": "Đúng thuốc - đúng liều - đúng giờ",
-        "path": "/cach-su-dung-dung-cu-hit"
+        "path": "/su-dung-buong-dem"
       },
       {
         "title": "XỬ TRÍ TẠI NHÀ",
@@ -205,50 +215,27 @@
         }
       ]
     },
-    "cach-su-dung-dung-cu-hit": {
-      "title": "Cách Sử Dụng Dụng Cụ Hít",
-      "intro": "Dùng đúng kỹ thuật giúp thuốc vào phổi tốt hơn và giảm tác dụng phụ.",
-      "sections": [
-        {
-          "heading": "MDI với buồng đệm (trẻ trên 4 tuổi)",
-          "content": [
-            "Lắc kỹ bình thuốc.",
-            "Gắn bình vào buồng đệm.",
-            "Ngậm kín miệng vào buồng đệm.",
-            "Ấn 1 nhát thuốc.",
-            "Hít chậm bằng miệng 10-15 giây.",
-            "Nếu cần thêm liều, nghỉ khoảng 1 phút rồi lặp lại."
-          ]
-        },
-        {
-          "heading": "MDI với mặt nạ (trẻ dưới 4 tuổi)",
-          "content": [
-            "Lắc kỹ bình thuốc.",
-            "Gắn bình vào buồng đệm và mặt nạ.",
-            "Úp kín mặt nạ mũi-miệng trẻ.",
-            "Ấn 1 nhát thuốc.",
-            "Cho trẻ thở bình thường khoảng 10 giây."
-          ]
-        },
-        {
-          "heading": "Máy khí dung",
-          "content": [
-            "Rửa tay trước khi chuẩn bị.",
-            "Cho thuốc vào bầu phun theo hướng dẫn.",
-            "Đeo mặt nạ hoặc dùng ống ngậm.",
-            "Bật máy và cho trẻ hít thở chậm.",
-            "Khi hết sương thì tắt máy."
-          ]
-        },
-        {
-          "heading": "Vệ sinh dụng cụ",
-          "content": [
-            "Rửa dụng cụ bằng nước ấm và xà phòng nhẹ.",
-            "Để khô tự nhiên.",
-            "Súc miệng hoặc rơ miệng sau corticoid hít."
-          ]
-        }
-      ]
+    "su-dung-mat-na": {
+      "title": "MDI Với Mặt Nạ (Trẻ Dưới 4 Tuổi)",
+      "intro": "Minh họa các bước dùng bình xịt liều định lượng (MDI) với buồng đệm và mặt nạ cho trẻ nhỏ.",
+      "leadImage": "/assets/SuDungMatNa.jpg",
+      "sections": []
+    },
+    "su-dung-may-khi-dung": {
+      "title": "Máy Khí Dung",
+      "intro": "Minh họa các bước phun khí dung đúng cách, an toàn cho trẻ.",
+      "leadImage": "/assets/SuDungMayKhiDung.jpg",
+      "sections": []
+    },
+    "su-dung-buong-dem": {
+      "title": "MDI Với Buồng Đệm (Trẻ Trên 4 Tuổi)",
+      "intro": "Minh họa các bước ngậm buồng đệm với MDI và lưu ý sau phun corticoid hít.",
+      "leadImage": "/assets/SuDungBuongDem.jpg",
+      "sections": [],
+      "cleanSection": {
+        "title": "Cách Vệ Sinh Buồng Đệm",
+        "leadImage": "/assets/VeSinhBuongDem.jpg"
+      }
     }
   },
   "footer": {
@@ -256,6 +243,6 @@
     "note": "Chung tay vì sức khỏe trẻ em",
     "address": "341 Sư Vạn Hạnh, Phường Vườn Lài, Thành phố Hồ Chí Minh, Việt Nam",
     "qrText": "Quét mã để truy cập website giáo dục hen",
-    "qrImage": "/assets/QRNhiDongOrgHuongDanChiTiet.png"
+    "qrImage": "/assets/QRNhiDongOrgHuongDanChiTiet.jpg"
   }
 }
